@@ -1,0 +1,33 @@
+{
+  "name": "experts-lead",
+  "description": "",
+  "main": "package.json",
+  "authors": [
+    "Eared<mr.tutelka@mail.ru>",
+	"ProjectSoft<projectsoft2009@yandex.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/iec-triumf/experts-lead",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^1.12.4",
+    "slick-carousel": "https://github.com/kenwheeler/slick.git#1.6.0",
+    "jarallax": "https://github.com/nk-o/jarallax.git#^1.7.3",
+    "fancybox": "^3.0.47",
+    "jquery.maskedinput": "https://github.com/digitalBush/jquery.maskedinput.git#^1.4.1",
+    "hyphernationRUru": "https://github.com/ProjectSoft-STUDIONIONS/hyphernationRUru.git",
+    "turn.js": "https://github.com/blasten/turn.js.git",
+    "jquery_lazyload": "jquery.lazyload#^1.9.7",
+    "jquery-ui": "https://github.com/components/jqueryui.git#1.12.1",
+    "arcticModal": "https://github.com/vjik/arcticModal.git",
+    "jqueryui-touch-punch": "https://github.com/furf/jquery-ui-touch-punch.git",
+    "mixitup": "https://github.com/patrickkunka/mixitup.git#^3.1.12"
+  }
+}

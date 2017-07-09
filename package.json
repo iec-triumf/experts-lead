@@ -1,0 +1,40 @@
+{
+  "name": "experts-lead",
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iec-triumf/experts-lead.git"
+  },
+  "author": "ProjectSoft <projectsoft2009@yandex.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iec-triumf/experts-lead/issues"
+  },
+  "homepage": "https://github.com/iec-triumf/experts-lead#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jade": "^1.0.0",
+    "grunt-contrib-less": "^1.3.0",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ftp-push": "^1.1.1",
+    "grunt-modernizr": "^1.0.2",
+    "grunt-newer": "^1.2.0",
+    "grunt-notify": "git+https://github.com/ProjectSoft-STUDIONIONS/grunt-notify.git",
+    "load-grunt-tasks": "^3.5.0",
+    "time-grunt": "^1.4.0"
+  }
+}
