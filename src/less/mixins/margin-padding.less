@@ -1,0 +1,10 @@
+.make-mp(@style, @prefix, @step: 5, @end: 100){
+	.loop(@counter) when (@counter <= @end) {
+		@class: ~".@{prefix}-@{counter}";
+		@{class}{
+			@{style}: 1px * @counter;
+		}
+		.loop((@counter + @step));
+	}
+	.loop(0);
+}

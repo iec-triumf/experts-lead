@@ -2,7 +2,7 @@ module.exports = function(grunt){
 	var gc = {
 		imageNotyfy: __dirname+'\\src\\notify.png',
 		minifyHtml: false,
-		minifyCss: true
+		minifyCss: false
 	};
 	require('load-grunt-tasks')(grunt);
 	require('time-grunt')(grunt);

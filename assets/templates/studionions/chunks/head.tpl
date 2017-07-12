@@ -13,4 +13,5 @@
   <link rel="shortcut icon" href="/favicon/favicon.ico"/>
   <meta name="msapplication-config" content="/favicon/browserconfig.xml"/>
   <meta name="theme-color" content="#ffffff"/>
+  <link href="/assets/templates/studionions/css/main.css" rel="stylesheet" type="text/css"/>
 </head>
