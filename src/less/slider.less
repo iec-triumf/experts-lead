@@ -23,9 +23,19 @@
 		height: 100%;
 		white-space: normal;
 		text-align: left;
+		position: relative;
+		height: auto;
 		&-row {
 			position: relative;
 			height: auto;
+			@media (max-width: 991px) {
+				padding-right: 0px;
+				padding-left: 0px;
+			}
+			@media screen and (max-width: 767px) {
+				margin-left: 0;
+				margin-right: 0;
+			}
 		}
 		&-intro {
 			position: absolute;
@@ -39,6 +49,16 @@
 			flex-direction: column;
 			border-radius: 4px;
 			background-color: #4a6fbe;
+			@media (max-width: 991px){
+				height: 340px;
+				max-height: 340px;
+			}
+			@media (max-width: 767px){
+				position: relative;
+				top: 0px;
+				bottom: 0px;
+				width: 100%;
+			}
 		}
 		&-h2 {
 			max-width: 460px;
@@ -95,6 +115,13 @@
 				height: 340px;
 				padding: 0px;
 				align-items: flex-start;
+				@media (max-width: 991px){
+					align-items: stretch;
+				}
+				@media (max-width: 767px){
+					height: 320px;
+					max-height: 320px;
+				}
 			}
 			&-right {
 				display: flex;
@@ -103,6 +130,10 @@
 				padding-left: 0px;
 				justify-content: flex-end;
 				align-items: flex-end;
+				@media (max-width: 767px){
+					display: none;
+					height: 360px;
+				}
 				.slide {
 					&-background {
 						position: absolute;

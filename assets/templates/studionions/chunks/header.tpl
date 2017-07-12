@@ -4,8 +4,8 @@
     <div class="brand"><img height="40" src="/assets/templates/studionions/images/logotip.svg"/></div>
     <nav class="header-navigation">
       <ul class="header-navigation-list">
-        <li class="list-item-menu"><a href="#" class="link-menu button">почему мы?</a></li>
-        <li class="list-item-menu"><a href="#" class="link-menu button">эксперты</a></li>
+        <li class="list-item-menu"><a href="#" class="link-menu button">Почему мы?</a></li>
+        <li class="list-item-menu"><a href="#" class="link-menu button">Эксперты</a></li>
         <li class="list-item-menu"><a href="#" class="link-menu button">Услуги и цены</a></li>
         <li class="list-item-menu"><a href="#" class="link-menu button">Контакты</a></li>
       </ul>
@@ -13,8 +13,8 @@
     <nav data-ix="menu-mobile-load" class="header-navigation-mobile">
       <ul class="header-navigation-list">
         <li class="list-item-menu"><a href="#" class="link-menu button">Услуги и цены</a></li>
-        <li class="list-item-menu"><a href="#" class="link-menu button">почему мы?</a></li>
-        <li class="list-item-menu"><a href="#" class="link-menu button">эксперты</a></li>
+        <li class="list-item-menu"><a href="#" class="link-menu button">Почему мы?</a></li>
+        <li class="list-item-menu"><a href="#" class="link-menu button">Эксперты</a></li>
         <li class="list-item-menu"><a href="#" class="link-menu button">Контакты</a></li>
       </ul>
     </nav><a href="tel:+74951200977" class="full-phone-block">

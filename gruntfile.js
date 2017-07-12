@@ -125,17 +125,17 @@ module.exports = function(grunt){
 					'assets/templates/studionions/js/app.js' : [
 						'src/js/utilites.js',
 						'bower_components/jquery/dist/jquery.js',
-						'test/js/jquery.custom-ui.js',
+						//'test/js/jquery.custom-ui.js',
 						'bower_components/jquery-mousewheel/jquery.mousewheel.js',
 						'bower_components/jqueryui-touch-punch/jquery.ui.touch-punch.js',
-						'bower_components/jquery_lazyload/jquery.lazyload.js',
+						//'bower_components/jquery_lazyload/jquery.lazyload.js',
 						'bower_components/jquery.maskedinput/dist/jquery.maskedinput.js',
-						'bower_components/fancybox/dist/jquery.fancybox.js',
+						//'bower_components/fancybox/dist/jquery.fancybox.js',
 						'bower_components/slick-carousel/slick/slick.js',
-						'bower_components/jarallax/jarallax/jarallax.js',
-						'bower_components/jarallax/jarallax/jarallax-video.js',
+						//'bower_components/jarallax/jarallax/jarallax.js',
+						//'bower_components/jarallax/jarallax/jarallax-video.js',
 						'bower_components/arcticModal/arcticmodal/jquery.arcticmodal.js',
-						'bower_components/mixitup/dist/mixitup.js',
+						//'bower_components/mixitup/dist/mixitup.js',
 					]
 				}
 			},
@@ -256,6 +256,23 @@ module.exports = function(grunt){
 				dest: 'assets/templates/studionions/chunks/',
 			}
 		},
+		clean: {
+			test : {
+				src: [
+					'test'
+				]
+			},
+			font: {
+				src: [
+					'assets/templates/studionions/fonts'
+				]
+			},
+			chunck: {
+				src: [
+					'assets/templates/studionions/chunks'
+				]
+			}
+		},
 		watch: {
 			options: {
 				livereload: true,
@@ -264,32 +281,32 @@ module.exports = function(grunt){
 				files: [
 					'src/jade/**/*.jade',
 				],
-				tasks: ["jade","copy:tpl","notify:done"]
+				tasks: ["clean:test","clean:chunck","jade","copy:tpl","notify:done"]
 			},
 			font: {
 				files: [
 					'src/fonts/**/*.*',
 				],
-				tasks: ["copy:main","notify:done"]
+				tasks: ["clean:font","copy:main","copy:bootstrap","copy:slick","notify:done"]
 			},
 			js: {
 				files: [
 					'src/js/**/*.js'
 				],
-				tasks: ['notify:watch', 'uglify:main', 'notify:done']
+				tasks: ['notify:watch','uglify:main', 'notify:done']
 			},
 			css: {
 				files: [
 					'src/less/**/*.{css,less}',
 				],
-				tasks: ['notify:watch', 'less', 'autoprefixer','notify:done']
+				tasks: ['notify:watch',"clean:test",'less', 'autoprefixer','notify:done']
 			},
 			images: {
 				files: [
 					'src/images/*.{png,jpg,gif,svg}',
 					'src/images/css/*.{png,jpg,gif,svg}'
 				],
-				tasks: ['notify:watch', 'newer:imagemin', 'less', 'autoprefixer', 'notify:done']
+				tasks: ['notify:watch','newer:imagemin', 'less', 'autoprefixer', 'notify:done']
 			}
 		},
 		notify: {
@@ -309,6 +326,6 @@ module.exports = function(grunt){
 			}
 		}
 	});
-	grunt.registerTask('default', 	['notify:watch','imagemin','less','autoprefixer','jade','copy','modernizr','requirejs','uglify','notify:done']);
+	grunt.registerTask('default', 	['notify:watch','clean','imagemin','less','autoprefixer','jade','copy','modernizr','requirejs','uglify','notify:done']);
 	grunt.registerTask('dev', 		['watch']);
 }
