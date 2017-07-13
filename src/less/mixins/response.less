@@ -1,0 +1,21 @@
+.block-center(){
+	margin-left: auto;
+	margin-right: auto;
+}
+.block {
+	&-center {
+		.block-center();
+	}
+}
+.img {
+	&-responsive {
+		display: block;
+		max-width: 100%;
+	}
+	&-cricle {
+		display: block;
+		overflow: hidden;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+}

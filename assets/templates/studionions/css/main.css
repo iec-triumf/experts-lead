@@ -178,6 +178,90 @@ td,
 th {
   padding: 0;
 }
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+}
+.slick-track:before,
+.slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
 .text-right {
   text-align: right;
 }
@@ -189,6 +273,21 @@ th {
 }
 .text-lowercase {
   text-transform: lowercase;
+}
+.block-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+}
+.img-cricle {
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 *,
 *:before,
@@ -255,6 +354,10 @@ a:active,
 a:hover,
 a:focus {
   outline: 0;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 .clearfix:before,
 .clearfix:after {
@@ -1653,6 +1756,193 @@ img {
   background-image: url('/assets/templates/studionions/images/photo_0003.jpg');
   background-position: 100% 100%;
   background-size: cover;
+}
+/* Slider */
+/*
+.slick-loading .slick-list{
+    background: #fff url('@{slick-loader-path}ajax-loader.gif') center center no-repeat;
+}
+*/
+/* Icons */
+/*
+@font-face{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('@{slick-font-path}slick.eot');
+    src: url('@{slick-font-path}slick.eot?#iefix') format('embedded-opentype'), url('@{slick-font-path}slick.woff') format('woff'), url('@{slick-font-path}slick.ttf') format('truetype'), url('@{slick-font-path}slick.svg#slick') format('svg');
+}
+*/
+/* Arrows */
+/*
+.slick-prev,
+.slick-next {
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 20px;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    padding: 0;
+    border: none;
+    outline: none;
+    &:hover, &:focus {
+        outline: none;
+        background: transparent;
+        color: transparent;
+        &:before {
+            opacity: @slick-opacity-on-hover;
+        }
+    }
+    &.slick-disabled:before {
+        opacity: @slick-opacity-not-active;
+    }
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: @slick-font-family;
+    font-size: 20px;
+    line-height: 1;
+    color: @slick-arrow-color;
+    opacity: @slick-opacity-default;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+    left: -25px;
+    &[dir="rtl"] {
+        left: auto;
+        right: -25px;
+    }
+    &:before {
+        content: @slick-prev-character;
+        &[dir="rtl"] {
+            content: @slick-next-character;
+        }
+    }
+}
+
+.slick-next {
+    right: -25px;
+    &[dir="rtl"] {
+        left: -25px;
+        right: auto;
+    }
+    &:before {
+        content: @slick-next-character;
+        &[dir="rtl"] {
+            content: @slick-prev-character;
+        }
+    }
+}
+*/
+/* Dots */
+/*
+
+*/
+.block-expert-full {
+  position: relative;
+  min-height: calc(100vh - 80px);
+}
+.block-expert-full.init {
+  padding-bottom: 30px;
+}
+.block-expert-full .slick-dotted .slick-slider {
+  margin-bottom: 30px;
+}
+.block-expert-full .slick-dots {
+  position: absolute;
+  bottom: 50px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.block-expert-full .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+.block-expert-full .slick-dots li .slick-dot {
+  border: 0;
+  display: block;
+  width: 60px;
+  margin-right: 20px;
+  background-color: #6f9dd4;
+  opacity: 1;
+  outline: none;
+  padding: 0px;
+  height: 3px;
+  cursor: pointer;
+}
+.block-expert-full .slick-dots li .slick-dot:hover,
+.block-expert-full .slick-dots li .slick-dot:focus {
+  outline: none;
+}
+.block-expert-full .slick-dots li .slick-dot:hover:before {
+  background-color: #fff;
+}
+.block-expert-full .slick-dots li .slick-dot:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.block-expert-full .slick-dots li.slick-active .slick-dot:before {
+  background-color: #fff;
+}
+.slider-expert {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.slider-expert .slick-item:hover,
+.slider-expert .slick-item:focus,
+.slider-expert .slick-item:active {
+  outline: 0;
+}
+.slider-expert .slick-item .box-expert {
+  width: 100%;
+  height: 100%;
+  padding: 40px 20px;
+}
+.slider-expert .slick-item .box-expert .h3-fio {
+  position: relative;
+  z-index: 5;
+  margin-bottom: 30px;
+  font-family: HelveticaNeueCyr, sans-serif;
+  font-size: 16px;
+  line-height: 1em;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+.slider-expert .slick-item .box-expert .expert-photo img {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 20px;
 }
 .header {
   position: fixed;
